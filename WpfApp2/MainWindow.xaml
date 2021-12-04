@@ -42,7 +42,6 @@
                 </Rectangle.Fill>
             </Rectangle>
         </Border>
-        <Menu Grid.Column="1"  Grid.Row="2" />
-        
+
     </Grid>
 </Window>
