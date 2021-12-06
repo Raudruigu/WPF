@@ -15,14 +15,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="1024px-Hamburger_icon_white.svg.png" />
-    <Resource Include="79-796674_professional-background-images-for-ppt-3-high-resolution.jpg" />
-    <Resource Include="8c685fdc6087e7ac6e8722d8221f8406.jpg" />
-    <Resource Include="LogoEasySave.png" />
+    <Resource Include="images\1024px-Hamburger_icon_white.svg.png" />
+    <Resource Include="images\79-796674_professional-background-images-for-ppt-3-high-resolution.jpg" />
+    <Resource Include="images\8c685fdc6087e7ac6e8722d8221f8406.jpg" />
+    <Resource Include="images\LogoEasySave.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <SplashScreen Include="SplashScreen1.png" />
+    <SplashScreen Include="images\SplashScreen1.png" />
   </ItemGroup>
 
 </Project>
