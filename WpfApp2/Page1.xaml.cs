@@ -16,20 +16,14 @@ using System.Windows.Shapes;
 namespace WpfApp2
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Logique d'interaction pour Page1.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Page1 : Page
     {
-        public MainWindow()
+        public Page1()
         {
             InitializeComponent();
-
         }
 
-        private void BtnClickCreate(object sender, RoutedEventArgs e)
-        {
-            Main.Content = new Page1();
-
-        }
     }
 }
