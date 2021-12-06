@@ -8,13 +8,21 @@
 
   <ItemGroup>
     <None Remove="1024px-Hamburger_icon_white.svg.png" />
+    <None Remove="515+r6pkGUL.png" />
     <None Remove="79-796674_professional-background-images-for-ppt-3-high-resolution.jpg" />
     <None Remove="8c685fdc6087e7ac6e8722d8221f8406.jpg" />
+    <None Remove="8c685fdc6087e7ac6e8722d8221f8406.png" />
     <None Remove="LogoEasySave.png" />
     <None Remove="SplashScreen1.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="ShowMeTheXAML.MSBuild" Version="2.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="515+r6pkGUL.png" />
+    <Resource Include="8c685fdc6087e7ac6e8722d8221f8406.png" />
     <Resource Include="images\1024px-Hamburger_icon_white.svg.png" />
     <Resource Include="images\79-796674_professional-background-images-for-ppt-3-high-resolution.jpg" />
     <Resource Include="images\8c685fdc6087e7ac6e8722d8221f8406.jpg" />
