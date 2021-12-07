@@ -25,5 +25,12 @@ namespace WpfApp2
             InitializeComponent();
 
         }
+
+        private void ClickButtonCreate(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new NewBackupJob();
+
+        }
+
     }
 }

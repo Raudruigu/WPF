@@ -5,52 +5,54 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
         Title="EasySave v2.0" Height="450" Width="800">
-    <Grid Background="Black">
+    <Grid >
+        <Grid.Background>
+            <ImageBrush ImageSource="/8c685fdc6087e7ac6e8722d8221f8406.jpg"/>
+        </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="37*"/>
-            <RowDefinition Height="75*"/>
-            <RowDefinition Height="46*"/>
-            <RowDefinition Height="42*"/>
+            <RowDefinition Height="56*"/>
+            <RowDefinition Height="52*"/>
+            <RowDefinition Height="55*"/>
             <RowDefinition Height="205*"/>
             <RowDefinition Height="28*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="113*"/>
-            <ColumnDefinition Width="153*"/>
-            <ColumnDefinition Width="32*"/>
-            <ColumnDefinition Width="190*"/>
-            <ColumnDefinition Width="42*"/>
-            <ColumnDefinition Width="170*"/>
-            <ColumnDefinition Width="100*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="34*"/>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="34*"/>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="34*"/>
+            <ColumnDefinition Width="20*"/>
         </Grid.ColumnDefinitions>
         <TextBlock
-            Grid.Column="0"
-            FontSize="16"
-            VerticalAlignment="Center"
-            Foreground="White"
-            Text="Easy Save 2.0" Grid.Row="0"/>
+                Grid.Column="0"
+                FontSize="16"
+                Foreground="Black"
+                Text="Easy Save 2.0" Grid.Row="0"/>
 
         <TextBlock
-            Grid.Column="1"
-            TextAlignment="Left"
-            Foreground="White"
-            Grid.Row="2" Height="42" Grid.RowSpan="2" VerticalAlignment="Bottom"><Run/><LineBreak/><Run Text="Backup Jobs:"/></TextBlock>
-
+                Grid.Column="1"
+                TextAlignment="Left"
+                Foreground="Black"
+                Grid.Row="3" Height="55" VerticalAlignment="Center"><Run/><LineBreak/><Run Text="Backup Jobs:"/></TextBlock>
+        <Button
+                    Foreground="Black"
+                    Content="Create a new Backup Job" Background="{x:Null}" BorderBrush="{x:Null}" Grid.Row="1" Grid.Column="1" Margin="0,56,0,0" FontFamily="Arial" FontSize="14" UseLayoutRounding="True" Cursor="Hand" TextBlock.Foreground="Black" Grid.RowSpan="2" Click="ClickButtonCreate" >
+        </Button>
 
         <Button
-                Foreground="White"
-                Content="Create a new Backup Job" Background="{x:Null}" BorderBrush="{x:Null}" Grid.Row="2" Grid.Column="1" />
+                    Foreground="Black"
+                    Content="Launch an Existing Backup Job" Background="{x:Null}" BorderBrush="{x:Null}" Grid.Row="1" Grid.Column="3" Margin="0,56,0,0" TextBlock.Foreground="Black" Grid.RowSpan="2" />
 
         <Button
-                Foreground="White"
-                Content="Launch an Existing Backup Job" Background="{x:Null}" BorderBrush="{x:Null}" Grid.Row="2" Grid.Column="3" />
+                    Foreground="Black"
+                    Content="Launch all existing Backup Job" Background="{x:Null}" BorderBrush="{x:Null}" Grid.Row="1" Grid.Column="5" Margin="0,56,0,0" TextBlock.Foreground="Black" Grid.RowSpan="2"/>
 
-        <Button
-                Foreground="White"
-                Content="Launch all existing Backup Job" Background="{x:Null}" BorderBrush="{x:Null}" Grid.Row="2" Grid.Column="5"/>
+        <DataGrid Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="5" Margin="0,55,0,28" Grid.RowSpan="3"/>
 
-        <DataGrid Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="5"/>
-
+        <Frame x:Name="Main" Grid.ColumnSpan="7" Grid.RowSpan="6"/>
     </Grid>
 
 </Window>
