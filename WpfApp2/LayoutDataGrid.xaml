@@ -9,6 +9,6 @@
       Title="LayoutDataGrid">
 
     <Grid>
-        <TextBlock Text="DataGrid Monsieur"/>
+        <TextBlock><Run Text="DataGrid "/><Run Language="fr-fr" Text="ielle"/></TextBlock>
     </Grid>
 </Page>
