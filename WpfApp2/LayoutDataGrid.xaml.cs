@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace WpfApp2
 {
     /// <summary>
-    /// Logique d'interaction pour Page1.xaml
+    /// Logique d'interaction pour LayoutDataGrid.xaml
     /// </summary>
-    public partial class Page1 : Page
+    public partial class LayoutDataGrid : Page
     {
-        public Page1()
+        public LayoutDataGrid()
         {
             InitializeComponent();
         }
