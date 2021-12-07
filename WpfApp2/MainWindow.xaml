@@ -18,13 +18,13 @@
             <RowDefinition Height="28*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="113*"/>
-            <ColumnDefinition Width="180*"/>
             <ColumnDefinition Width="20*"/>
-            <ColumnDefinition Width="175*"/>
-            <ColumnDefinition Width="42*"/>
-            <ColumnDefinition Width="170*"/>
-            <ColumnDefinition Width="100*"/>
+            <ColumnDefinition Width="34*"/>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="34*"/>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="34*"/>
+            <ColumnDefinition Width="20*"/>
         </Grid.ColumnDefinitions>
         <TextBlock
                 Grid.Column="0"
@@ -37,11 +37,6 @@
                 TextAlignment="Left"
                 Foreground="Black"
                 Grid.Row="3" Height="55" VerticalAlignment="Center"><Run/><LineBreak/><Run Text="Backup Jobs:"/></TextBlock>
-
-
-
-
-
         <Button
                     Foreground="White"
                     Content="Create a new Backup Job" Background="{x:Null}" BorderBrush="{x:Null}" Grid.Row="1" Grid.Column="1" Margin="0,56,0,0" FontFamily="Arial" FontSize="14" UseLayoutRounding="True" Cursor="Hand" Click="BtnClickCreate" TextBlock.Foreground="Black" Grid.RowSpan="2" >
