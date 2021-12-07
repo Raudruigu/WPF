@@ -61,7 +61,7 @@
             Foreground="White"
             BorderBrush="{x:Null}" Grid.Row="0" Grid.Column="7" TextBlock.Foreground="Black" Click="BtnClickSettings">
             <Button.Background>
-                <ImageBrush ImageSource="/4c8b44e9005f70feeb7fe01aedf475c6.jpg"/>
+                <ImageBrush ImageSource="/Settings.png"/>
             </Button.Background>
         </Button>
 

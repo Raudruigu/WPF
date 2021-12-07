@@ -14,7 +14,8 @@
             <RowDefinition Height="26*"/>
             <RowDefinition Height="27*"/>
             <RowDefinition Height="90*"/>
-            <RowDefinition Height="167*"/>
+            <RowDefinition Height="121*"/>
+            <RowDefinition Height="46*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="45*"/>
@@ -25,7 +26,8 @@
             <ColumnDefinition Width="21*"/>
             <ColumnDefinition Width="112*"/>
             <ColumnDefinition Width="45*"/>
-            <ColumnDefinition Width="117*"/>
+            <ColumnDefinition Width="72*"/>
+            <ColumnDefinition Width="45*"/>
         </Grid.ColumnDefinitions>
         <TextBlock x:Name="Title"
             FontSize="14"
@@ -41,7 +43,7 @@
         </TextBox>
 
 
-        <Button Style="{DynamicResource MainMenuButton}" x:Name="MainMenuButton" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="1" Foreground="#FF343E7E">
+        <Button Style="{DynamicResource MainMenuButton}" x:Name="MainMenuButton" Grid.Row="7" Grid.Column="9" Grid.ColumnSpan="1" Foreground="#FF343E7E">
             <Button.Background>
                 <ImageBrush ImageSource="/ReturnArrow.png"/>
             </Button.Background>
@@ -49,7 +51,7 @@
         <TextBlock x:Name="BackupJobName"
             Grid.Row="3" Grid.Column="3" TextAlignment="Center" Foreground="White" Margin="74,0,74,0" ><Run Language="fr-fr" Text="Backup job's name"/></TextBlock>
 
-        <DataGrid x:Name="SavedBackupJobs" Grid.Column="2" Grid.Row="6" d:ItemsSource="{d:SampleData ItemCount=5}" Grid.ColumnSpan="6"/>
+        <DataGrid x:Name="SavedBackupJobs" Grid.Column="2" Grid.Row="6" d:ItemsSource="{d:SampleData ItemCount=5}" Grid.ColumnSpan="6" Grid.RowSpan="2"/>
 
         <Button Style="{DynamicResource CreateTheBackupJobButton}" x:Name="CreateTheBackupJobButton"  Grid.Column="6" Content="Run the backup job"  Grid.Row="4" Margin="0,1,0,0" >
             <Button.Resources>

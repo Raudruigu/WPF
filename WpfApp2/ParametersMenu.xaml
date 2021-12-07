@@ -28,9 +28,11 @@
             <RowDefinition Height="23*"/>
             <RowDefinition Height="22*"/>
             <RowDefinition Height="108*"/>
-            <RowDefinition Height="15*"/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="6*"/>
             <RowDefinition Height="35*"/>
-            <RowDefinition Height="18*"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="12*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="45*"/>
@@ -43,7 +45,8 @@
             <ColumnDefinition Width="48*"/>
             <ColumnDefinition Width="22*"/>
             <ColumnDefinition Width="15*"/>
-            <ColumnDefinition Width="36*"/>
+            <ColumnDefinition Width="22*"/>
+            <ColumnDefinition Width="14*"/>
             <ColumnDefinition Width="8*"/>
             <ColumnDefinition Width="23*"/>
             <ColumnDefinition Width="53*"/>
@@ -72,29 +75,29 @@
                 Text="Software exceptions"  Grid.Row="12" Grid.Column="5" Grid.ColumnSpan="5" TextAlignment="Center" Foreground="White"/>
 
         <TextBlock x:Name="ExtensionsToEncrypt"
-                Grid.Row="12" Grid.Column="19" Grid.ColumnSpan="5" TextAlignment="Center" Foreground="White"><Run Text="Extension"/><Run Language="fr-fr" Text="s"/><Run Text=" to encrypt"/></TextBlock>
+                Grid.Row="12" Grid.Column="20" Grid.ColumnSpan="5" TextAlignment="Center" Foreground="White"><Run Text="Extension"/><Run Language="fr-fr" Text="s"/><Run Text=" to encrypt"/></TextBlock>
 
-        <DataGrid x:Name="ExtensionsToEncryptDataGrid" Grid.Row="13" Grid.Column="15" Grid.ColumnSpan="12"/>
-        <DataGrid x:Name="SoftwareExceptions1" Grid.Row="13" Grid.Column="3" Grid.ColumnSpan="10"/>
+        <DataGrid x:Name="ExtensionsToEncryptDataGrid" Grid.Row="13" Grid.Column="16" Grid.ColumnSpan="12"/>
+        <DataGrid x:Name="SoftwareExceptions1" Grid.Row="13" Grid.Column="3" Grid.ColumnSpan="11"/>
 
-        <TextBox x:Name="ExtensionsToEncryptTextBox" Grid.Column="16"  Grid.Row="8" TextWrapping="Wrap" Grid.ColumnSpan="10"  />
-        <Button Style="{DynamicResource CreateTheBackupJobButton}" x:Name="RemoveExtensionsToEncryptButton" Grid.Column="22" Grid.Row="10" Content="Remove" Grid.ColumnSpan="4"/>
-        <Button Style="{DynamicResource CreateTheBackupJobButton}" x:Name="AddExtensionsToEncryptButton" Grid.Column="16" Grid.Row="10" Content="Add" Grid.ColumnSpan="5"/>
+        <TextBox x:Name="ExtensionsToEncryptTextBox" Grid.Column="17"  Grid.Row="8" TextWrapping="Wrap" Grid.ColumnSpan="10"  />
+        <Button Style="{DynamicResource CreateTheBackupJobButton}" x:Name="RemoveExtensionsToEncryptButton" Grid.Column="23" Grid.Row="10" Content="Remove" Grid.ColumnSpan="4"/>
+        <Button Style="{DynamicResource CreateTheBackupJobButton}" x:Name="AddExtensionsToEncryptButton" Grid.Column="17" Grid.Row="10" Content="Add" Grid.ColumnSpan="5"/>
 
-        <TextBox x:Name="SoftwareExceptionsTextBox" Grid.Column="4"  Grid.Row="8" TextWrapping="Wrap" Grid.ColumnSpan="8"  />
-        <Button Style="{DynamicResource CreateTheBackupJobButton}" x:Name="RemoveSoftwareExceptionsButton" Grid.Column="8" Grid.Row="10" Content="Remove" Grid.ColumnSpan="4"/>
+        <TextBox x:Name="SoftwareExceptionsTextBox" Grid.Column="4"  Grid.Row="8" TextWrapping="Wrap" Grid.ColumnSpan="9"  />
+        <Button Style="{DynamicResource CreateTheBackupJobButton}" x:Name="RemoveSoftwareExceptionsButton" Grid.Column="8" Grid.Row="10" Content="Remove" Grid.ColumnSpan="5"/>
         <Button Style="{DynamicResource CreateTheBackupJobButton}" x:Name="AddSoftwareExceptionsButton" Grid.Column="4" Grid.Row="10" Content="Add" Grid.ColumnSpan="3"/>
 
 
-        <Button x:Name="MainMenuButton" Grid.Row="14" Grid.Column="10" Grid.RowSpan="3" Grid.ColumnSpan="3" Click="BtnClickHome" Margin="22,8,0,14" RenderTransformOrigin="0.222,0.507" BorderThickness="0">
+        <Button x:Name="MainMenuButton" Grid.Row="15" Grid.Column="11" Grid.RowSpan="3" Grid.ColumnSpan="3" Click="BtnClickHome" Margin="0,1,0,0" RenderTransformOrigin="0.222,0.507" BorderThickness="0" Style="{DynamicResource MainMenuButton}" HorizontalAlignment="Center" Width="44">
             <Button.Background>
                 <ImageBrush ImageSource="/ReturnArrow.png"/>
             </Button.Background>
         </Button>
 
-        <RadioButton Grid.Column="22" Content="French" GroupName="Language" Foreground="White"  Grid.Row="6" Grid.ColumnSpan="3"/>
-        <RadioButton Grid.Column="19" Content="English" GroupName="Language" Foreground="White"  Grid.Row="6" Grid.ColumnSpan="3"  />
-        <RadioButton Grid.Column="8" Content="XML" GroupName="LogsExtension" Foreground="White"  Grid.Row="6"  Grid.ColumnSpan="4" />
+        <RadioButton Grid.Column="23" Content="French" GroupName="Language" Foreground="White"  Grid.Row="6" Grid.ColumnSpan="3"/>
+        <RadioButton Grid.Column="20" Content="English" GroupName="Language" Foreground="White"  Grid.Row="6" Grid.ColumnSpan="3"  />
+        <RadioButton Grid.Column="8" Content="XML" GroupName="LogsExtension" Foreground="White"  Grid.Row="6"  Grid.ColumnSpan="5" />
         <RadioButton Grid.Column="5" Content="JSON" GroupName="LogsExtension" Foreground="White"  Grid.Row="6"  Grid.ColumnSpan="3" />
 
         <TextBlock x:Name="Title_Copy"
@@ -105,25 +108,25 @@
         <TextBlock x:Name="Title_Copy1"
             FontSize="14"
             Foreground="White"
-            Grid.ColumnSpan="3" Grid.Column="20" Margin="0,0,3,0" Grid.Row="4" ><Run Language="fr-fr" Text="Language"/></TextBlock>
+            Grid.ColumnSpan="3" Grid.Column="21" Margin="0,0,3,0" Grid.Row="4" ><Run Language="fr-fr" Text="Language"/></TextBlock>
 
-        <TextBox x:Name="SoftwareExceptionsTextBox_Copy" Grid.Column="4"  Grid.Row="8" TextWrapping="Wrap" Grid.ColumnSpan="8"  />
+        <TextBox x:Name="SoftwareExceptionsTextBox_Copy" Grid.Column="4"  Grid.Row="8" TextWrapping="Wrap" Grid.ColumnSpan="9"  />
         <TextBlock x:Name="Title_Copy2"
             FontSize="14"
             Foreground="White"
-            Margin="0,0,0,2" Grid.Row="16"><Run Language="fr-fr" Text="v2.0.0"/></TextBlock>
-        <Button Style="{DynamicResource CreateTheBackupJobButton}" x:Name="RemoveExtensionsToEncryptButton_Copy" Grid.Column="15" Grid.Row="15" Content="Save parameters" Height="35" VerticalAlignment="Center" Grid.ColumnSpan="5"/>
-        <ComboBox Grid.Column="14" Grid.ColumnSpan="2" Grid.Row="4" >
+            Margin="0,0,0,2" Grid.Row="17" Grid.RowSpan="2"><Run Language="fr-fr" Text="v2.0.0"/></TextBlock>
+        <Button Style="{DynamicResource CreateTheBackupJobButton}" x:Name="RemoveExtensionsToEncryptButton_Copy" Grid.Column="16" Grid.Row="16" Content="Save parameters" Height="35" VerticalAlignment="Center" Grid.ColumnSpan="5"/>
+        <ComboBox Grid.Column="15" Grid.ColumnSpan="2" Grid.Row="4" >
             <ComboBoxItem>Go</ComboBoxItem>
             <ComboBoxItem>Mo</ComboBoxItem>
             <ComboBoxItem>Go</ComboBoxItem>
 
         </ComboBox>
-        <TextBox x:Name="SoftwareExceptionsTextBox_Copy1" Grid.Column="12"  Grid.Row="4" TextWrapping="Wrap" Grid.ColumnSpan="2" Text="Genre bcp"  />
+        <TextBox x:Name="SoftwareExceptionsTextBox_Copy1" Grid.Column="13"  Grid.Row="4" TextWrapping="Wrap" Grid.ColumnSpan="2" Text="Genre bcp"  />
         <TextBlock x:Name="Title_Copy3"
             FontSize="14"
             Foreground="White"
-            Grid.ColumnSpan="6" Grid.Column="11" Margin="0,0,0,2" Grid.Row="2" ><Run Language="fr-fr" Text="M"/><Run Text="inimum large file size"/></TextBlock>
+            Grid.ColumnSpan="6" Grid.Column="12" Margin="0,0,0,2" Grid.Row="2" ><Run Language="fr-fr" Text="M"/><Run Text="inimum large file size"/></TextBlock>
 
 
     </Grid>
