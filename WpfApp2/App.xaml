@@ -4,6 +4,13 @@
              xmlns:local="clr-namespace:WpfApp2"
              StartupUri="NewBackupJob.xaml">
     <Application.Resources>
-         
+
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Dictionary1.xaml"/>
+                <ResourceDictionary Source="/Dictionary2.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+
     </Application.Resources>
 </Application>
