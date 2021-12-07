@@ -37,7 +37,7 @@
                 Grid.Column="0"
                 FontSize="16"
                 Foreground="White"
-                Text="Easy Save 2.0" Grid.Row="0" Background="Black"/>
+                Text="EasySave 2.0" Grid.Row="0" Background="Black"/>
 
         <TextBlock
                 Grid.Column="1"
@@ -65,7 +65,11 @@
             </Button.Background>
         </Button>
 
-        <Frame x:Name="Main" Grid.ColumnSpan="8" Grid.RowSpan="7" NavigationUIVisibility="Hidden"/>
+        <Frame x:Name="Main" Grid.ColumnSpan="8" Grid.RowSpan="7" NavigationUIVisibility="Hidden">
+            <Frame.Background>
+                <ImageBrush/>
+            </Frame.Background>
+        </Frame>
 
 
     </Grid>

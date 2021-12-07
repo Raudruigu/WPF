@@ -8,11 +8,11 @@
 
   <ItemGroup>
     <None Remove="1024px-Hamburger_icon_white.svg.png" />
-    <None Remove="4c8b44e9005f70feeb7fe01aedf475c6.jpg" />
-    <None Remove="515+r6pkGUL.png" />
     <None Remove="79-796674_professional-background-images-for-ppt-3-high-resolution.jpg" />
     <None Remove="LogoEasySave.png" />
     <None Remove="png-clipart-white-flat-taskbar-icons-settings-gear-illustration-thumbnail.png" />
+    <None Remove="ReturnArrow.png" />
+    <None Remove="Settings.png" />
     <None Remove="SplashScreen1.png" />
   </ItemGroup>
 
@@ -21,10 +21,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="4c8b44e9005f70feeb7fe01aedf475c6.jpg" />
-    <Resource Include="515+r6pkGUL.png" />
     <Resource Include="images\8c685fdc6087e7ac6e8722d8221f8406.jpg" />
     <Resource Include="png-clipart-white-flat-taskbar-icons-settings-gear-illustration-thumbnail.png" />
+    <Resource Include="ReturnArrow.png" />
+    <Resource Include="Settings.png" />
   </ItemGroup>
 
   <ItemGroup>

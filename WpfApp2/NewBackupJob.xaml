@@ -52,7 +52,7 @@
         <TextBlock x:Name="Title"
             FontSize="14"
             Foreground="White"
-            Text="Easy Save 2.0"  Grid.ColumnSpan="2" />
+            Text="EasySave 2.0"  Grid.ColumnSpan="2" />
 
 
         <TextBlock x:Name="BackupType"
@@ -69,7 +69,7 @@
             </TextBox.Resources>
         </TextBox>
 
-        <TextBox x:Name="BackupJobNameTextBox" Grid.Column="2"  Grid.Row="4" TextWrapping="Wrap" Grid.ColumnSpan="7" TextChanged="OnTextBoxTextChanged">
+        <TextBox x:Name="BackupJobNameTextBox" Grid.Column="2"  Grid.Row="4" TextWrapping="Wrap" Grid.ColumnSpan="7">
             <TextBox.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="3"/>
