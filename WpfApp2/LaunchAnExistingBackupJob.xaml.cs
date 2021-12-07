@@ -18,9 +18,9 @@ namespace WpfApp2
     /// <summary>
     /// Logique d'interaction pour Page1.xaml
     /// </summary>
-    public partial class Page1 : Page
+    public partial class LaunchAnExistingBackupJob : Page
     {
-        public Page1()
+        public LaunchAnExistingBackupJob()
         {
             InitializeComponent();
         }
