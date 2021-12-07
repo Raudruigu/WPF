@@ -38,16 +38,16 @@
                 Foreground="Black"
                 Grid.Row="3" Height="55" VerticalAlignment="Center"><Run/><LineBreak/><Run Text="Backup Jobs:"/></TextBlock>
         <Button
-                    Foreground="White"
+                    Foreground="Black"
                     Content="Create a new Backup Job" Background="{x:Null}" BorderBrush="{x:Null}" Grid.Row="1" Grid.Column="1" Margin="0,56,0,0" FontFamily="Arial" FontSize="14" UseLayoutRounding="True" Cursor="Hand" Click="BtnClickCreate" TextBlock.Foreground="Black" Grid.RowSpan="2" >
         </Button>
 
         <Button
-                    Foreground="White"
+                    Foreground="Black"
                     Content="Launch an Existing Backup Job" Background="{x:Null}" BorderBrush="{x:Null}" Grid.Row="1" Grid.Column="3" Margin="0,56,0,0" TextBlock.Foreground="Black" Grid.RowSpan="2" />
 
         <Button
-                    Foreground="White"
+                    Foreground="Black"
                     Content="Launch all existing Backup Job" Background="{x:Null}" BorderBrush="{x:Null}" Grid.Row="1" Grid.Column="5" Margin="0,56,0,0" TextBlock.Foreground="Black" Grid.RowSpan="2"/>
 
         <DataGrid Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="5" Margin="0,55,0,28" Grid.RowSpan="3"/>
