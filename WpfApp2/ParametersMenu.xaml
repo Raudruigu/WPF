@@ -71,14 +71,14 @@
             Text="EasySave "  Grid.ColumnSpan="2"/>
 
 
-        <TextBlock x:Name="SoftwareExceptions"
+        <TextBlock x:Name="SoftwareExceptionsTextBlock"
                 Text="Software exceptions"  Grid.Row="12" Grid.Column="5" Grid.ColumnSpan="5" TextAlignment="Center" Foreground="White"/>
 
-        <TextBlock x:Name="ExtensionsToEncrypt"
+        <TextBlock x:Name="ExtensionsToEncryptTextBlock"
                 Grid.Row="12" Grid.Column="20" Grid.ColumnSpan="5" TextAlignment="Center" Foreground="White"><Run Text="Extension"/><Run Language="fr-fr" Text="s"/><Run Text=" to encrypt"/></TextBlock>
 
         <DataGrid x:Name="ExtensionsToEncryptDataGrid" Grid.Row="13" Grid.Column="16" Grid.ColumnSpan="12"/>
-        <DataGrid x:Name="SoftwareExceptions1" Grid.Row="13" Grid.Column="3" Grid.ColumnSpan="11"/>
+        <DataGrid x:Name="SoftwareExceptionsDataGrid" Grid.Row="13" Grid.Column="3" Grid.ColumnSpan="11"/>
 
         <TextBox x:Name="ExtensionsToEncryptTextBox" Grid.Column="17"  Grid.Row="8" TextWrapping="Wrap" Grid.ColumnSpan="10"  />
         <Button Style="{DynamicResource CreateTheBackupJobButton}" x:Name="RemoveExtensionsToEncryptButton" Grid.Column="23" Grid.Row="10" Content="Remove" Grid.ColumnSpan="4"/>
@@ -95,35 +95,35 @@
             </Button.Background>
         </Button>
 
-        <RadioButton Grid.Column="23" Content="French" GroupName="Language" Foreground="White"  Grid.Row="6" Grid.ColumnSpan="3"/>
-        <RadioButton Grid.Column="20" Content="English" GroupName="Language" Foreground="White"  Grid.Row="6" Grid.ColumnSpan="3"  />
-        <RadioButton Grid.Column="8" Content="XML" GroupName="LogsExtension" Foreground="White"  Grid.Row="6"  Grid.ColumnSpan="5" />
-        <RadioButton Grid.Column="5" Content="JSON" GroupName="LogsExtension" Foreground="White"  Grid.Row="6"  Grid.ColumnSpan="3" />
+        <RadioButton x:Name="FrenchRadio" Grid.Column="23" Content="French" GroupName="Language" Foreground="White"  Grid.Row="6" Grid.ColumnSpan="3"/>
+        <RadioButton x:Name="EnglishRadio" Grid.Column="20" Content="English" GroupName="Language" Foreground="White"  Grid.Row="6" Grid.ColumnSpan="3"  />
+        <RadioButton x:Name="XMLRadio" Grid.Column="8" Content="XML" GroupName="LogsExtension" Foreground="White"  Grid.Row="6"  Grid.ColumnSpan="5" />
+        <RadioButton x:Name="JSONRadio" Grid.Column="5" Content="JSON" GroupName="LogsExtension" Foreground="White"  Grid.Row="6"  Grid.ColumnSpan="3" />
 
-        <TextBlock x:Name="Title_Copy"
+        <TextBlock x:Name="LogsExtensionsTextBlock"
             FontSize="14"
             Foreground="White"
             Grid.ColumnSpan="3" Grid.Column="6" Grid.Row="4"><Run Language="fr-fr" Text="Logs Extension"/></TextBlock>
 
-        <TextBlock x:Name="Title_Copy1"
+        <TextBlock x:Name="LanguageTextBlock"
             FontSize="14"
             Foreground="White"
             Grid.ColumnSpan="3" Grid.Column="21" Margin="0,0,3,0" Grid.Row="4" ><Run Language="fr-fr" Text="Language"/></TextBlock>
 
-        <TextBox x:Name="SoftwareExceptionsTextBox_Copy" Grid.Column="4"  Grid.Row="8" TextWrapping="Wrap" Grid.ColumnSpan="9"  />
-        <TextBlock x:Name="Title_Copy2"
+        <TextBox x:Name="SoftwareExceptionsTextBox1" Grid.Column="4"  Grid.Row="8" TextWrapping="Wrap" Grid.ColumnSpan="9"  />
+        <TextBlock x:Name="VersionTextBlock"
             FontSize="14"
             Foreground="White"
             Margin="0,0,0,2" Grid.Row="17" Grid.RowSpan="2"><Run Language="fr-fr" Text="v2.0.0"/></TextBlock>
-        <Button Style="{DynamicResource CreateTheBackupJobButton}" x:Name="RemoveExtensionsToEncryptButton_Copy" Grid.Column="16" Grid.Row="16" Content="Save parameters" Height="35" VerticalAlignment="Center" Grid.ColumnSpan="5"/>
-        <ComboBox Grid.Column="15" Grid.ColumnSpan="2" Grid.Row="4" >
-            <ComboBoxItem>Go</ComboBoxItem>
-            <ComboBoxItem>Mo</ComboBoxItem>
-            <ComboBoxItem>Go</ComboBoxItem>
+        <Button Style="{DynamicResource CreateTheBackupJobButton}" x:Name="SaveParametersButton" Grid.Column="16" Grid.Row="16" Content="Save parameters" Height="35" VerticalAlignment="Center" Grid.ColumnSpan="5"/>
+        <ComboBox x:Name="MemoryUnitComboBox" Grid.Column="15" Grid.ColumnSpan="2" Grid.Row="4" >
+            <ComboBoxItem x:Name="GoComboBox">Go</ComboBoxItem>
+            <ComboBoxItem x:Name="MoComboBox">Mo</ComboBoxItem>
+            <ComboBoxItem x:Name="KoComboBox">Go</ComboBoxItem>
 
         </ComboBox>
-        <TextBox x:Name="SoftwareExceptionsTextBox_Copy1" Grid.Column="13"  Grid.Row="4" TextWrapping="Wrap" Grid.ColumnSpan="2" Text="Genre bcp"  />
-        <TextBlock x:Name="Title_Copy3"
+        <TextBox x:Name="MinimunLargeFileSizeTextBox" Grid.Column="13"  Grid.Row="4" TextWrapping="Wrap" Grid.ColumnSpan="2" Text="Genre bcp"  />
+        <TextBlock x:Name="MinimunLargeFileSizeTextBlock"
             FontSize="14"
             Foreground="White"
             Grid.ColumnSpan="6" Grid.Column="12" Margin="0,0,0,2" Grid.Row="2" ><Run Text="Minimum large file size"/></TextBlock>

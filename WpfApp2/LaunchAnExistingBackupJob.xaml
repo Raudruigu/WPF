@@ -57,19 +57,19 @@
                 <ImageBrush ImageSource="/ReturnArrow.png"/>
             </Button.Background>
         </Button>
-        <TextBlock x:Name="BackupJobName"
+        <TextBlock x:Name="BackupJobNameTextBlock"
             Grid.Row="3" Grid.Column="4" TextAlignment="Center" Foreground="White" Margin="74,0,74,0" ><Run Language="fr-fr" Text="Backup job's name"/></TextBlock>
 
-        <DataGrid x:Name="SavedBackupJobs" Grid.Column="3" Grid.Row="6" d:ItemsSource="{d:SampleData ItemCount=5}" Grid.ColumnSpan="6" Grid.RowSpan="3"/>
+        <DataGrid x:Name="SavedBackupJobsDataGrid" Grid.Column="3" Grid.Row="6" d:ItemsSource="{d:SampleData ItemCount=5}" Grid.ColumnSpan="6" Grid.RowSpan="3"/>
 
-        <Button Style="{DynamicResource CreateTheBackupJobButton}" x:Name="CreateTheBackupJobButton"  Grid.Column="7" Content="Run the backup job"  Grid.Row="4" Margin="0,1,0,0" >
+        <Button Style="{DynamicResource CreateTheBackupJobButton}" x:Name="RunTheBackupJobButton"  Grid.Column="7" Content="Run the backup job"  Grid.Row="4" Margin="0,1,0,0" >
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="5"/>
                 </Style>
             </Button.Resources>
         </Button>
-        <TextBlock x:Name="Title_Copy"
+        <TextBlock x:Name="SubtitleTextBlock"
             FontSize="14"
             Foreground="White" Grid.Row="8"  Text="v2.0.0"/>
 
