@@ -18,15 +18,10 @@ namespace WpfApp2
     /// <summary>
     /// Logique d'interaction pour LayoutDataGrid.xaml
     /// </summary>
-<<<<<<< HEAD:WpfApp2/LaunchAnExistingBackupJob.xaml.cs
-    public partial class LaunchAnExistingBackupJob : Page
-    {
-        public LaunchAnExistingBackupJob()
-=======
+
     public partial class LayoutDataGrid : Page
     {
         public LayoutDataGrid()
->>>>>>> f0288ebeb3facb41dbbefd6fd44a7dfc7badbd51:WpfApp2/LayoutDataGrid.xaml.cs
         {
             InitializeComponent();
         }
