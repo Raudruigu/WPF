@@ -26,6 +26,7 @@
             <ColumnDefinition Width="34*"/>
             <ColumnDefinition Width="20*"/>
         </Grid.ColumnDefinitions>
+        
         <TextBlock
                 Grid.Column="0"
                 FontSize="16"
@@ -55,9 +56,10 @@
         <Button
             Foreground="Black"
             Content="Settings" Background="{x:Null}" BorderBrush="{x:Null}" Grid.Row="0" Grid.Column="7" TextBlock.Foreground="Black" Click="BtnClickSettings"/>
-        
-       
-        <Frame x:Name="Main" Grid.ColumnSpan="7" Grid.RowSpan="6"/>
-    </Grid>
 
+        <Frame x:Name="Main" Grid.ColumnSpan="7" Grid.RowSpan="6" NavigationUIVisibility="Hidden"/>
+
+
+    </Grid>
+    
 </Window>
