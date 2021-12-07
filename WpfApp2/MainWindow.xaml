@@ -8,57 +8,64 @@
         Title="EasySave v2.0" Height="450" Width="800" Background="White">
     <Grid >
         <Grid.Background>
-            <ImageBrush ImageSource="/8c685fdc6087e7ac6e8722d8221f8406.jpg"/>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black"/>
+                <GradientStop Color="#FF303030" Offset="1"/>
+            </LinearGradientBrush>
         </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="37*"/>
             <RowDefinition Height="56*"/>
             <RowDefinition Height="52*"/>
-            <RowDefinition Height="94*"/>
+            <RowDefinition Height="56*"/>
+            <RowDefinition Height="38*"/>
             <RowDefinition Height="167*"/>
             <RowDefinition Height="28*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="20*"/>
-            <ColumnDefinition Width="34*"/>
-            <ColumnDefinition Width="9*"/>
-            <ColumnDefinition Width="34*"/>
-            <ColumnDefinition Width="9*"/>
-            <ColumnDefinition Width="34*"/>
-            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="100*"/>
+            <ColumnDefinition Width="170*"/>
+            <ColumnDefinition Width="45*"/>
+            <ColumnDefinition Width="170*"/>
+            <ColumnDefinition Width="45*"/>
+            <ColumnDefinition Width="170*"/>
+            <ColumnDefinition Width="63*"/>
+            <ColumnDefinition Width="37*"/>
         </Grid.ColumnDefinitions>
 
         <TextBlock
                 Grid.Column="0"
                 FontSize="16"
-                Foreground="Black"
-                Text="Easy Save 2.0" Grid.Row="0"/>
+                Foreground="White"
+                Text="Easy Save 2.0" Grid.Row="0" Background="Black"/>
 
         <TextBlock
                 Grid.Column="1"
                 TextAlignment="Left"
-                Foreground="Black"
-                Grid.Row="3" Height="55" VerticalAlignment="Center"><Run/><LineBreak/><Run Text="Backup Jobs:"/></TextBlock>
+                Foreground="White"
+                Grid.Row="3" Text="Backup Jobs" VerticalAlignment="Bottom"/>
+        <Button Style="{DynamicResource CreateTheBackupJobButton}"
+            
+                    Content="Create a new Backup Job" BorderBrush="{x:Null}" Grid.Row="1" Grid.Column="1" Margin="0,56,0,0" FontFamily="Arial" UseLayoutRounding="True" Cursor="Hand" TextBlock.Foreground="Black" Grid.RowSpan="2" Click="ClickButtonCreate" />
+
+        <Button Style="{DynamicResource CreateTheBackupJobButton}"
+            
+                    Content="Launch an Existing Backup Job" BorderBrush="{x:Null}" Grid.Row="1" Grid.Column="3" Margin="0,56,0,0" TextBlock.Foreground="Black" Grid.RowSpan="2" />
+
+        <Button Style="{DynamicResource CreateTheBackupJobButton}"
+                    
+                    Content="Launch All Existing Backup Jobs" BorderBrush="{x:Null}" Grid.Row="1" Grid.Column="5" Margin="0,56,0,0" TextBlock.Foreground="Black" Grid.RowSpan="2" />
+        <DataGrid Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="5" Grid.RowSpan="2"/>
+
         <Button
-                    Foreground="Black"
-                    Content="Create a new Backup Job" Background="{x:Null}" BorderBrush="{x:Null}" Grid.Row="1" Grid.Column="1" Margin="0,56,0,0" FontFamily="Arial" FontSize="14" UseLayoutRounding="True" Cursor="Hand" TextBlock.Foreground="Black" Grid.RowSpan="2" Click="ClickButtonCreate" >
+            Foreground="White"
+            BorderBrush="{x:Null}" Grid.Row="0" Grid.Column="7" TextBlock.Foreground="Black" Click="BtnClickSettings">
+            <Button.Background>
+                <ImageBrush ImageSource="/4c8b44e9005f70feeb7fe01aedf475c6.jpg"/>
+            </Button.Background>
         </Button>
 
-        <Button
-                    Foreground="Black"
-                    Content="Launch an Existing Backup Job" Background="{x:Null}" BorderBrush="{x:Null}" Grid.Row="1" Grid.Column="3" Margin="0,56,0,0" TextBlock.Foreground="Black" Grid.RowSpan="2" />
-
-        <Button
-                    Foreground="Black"
-                    Content="Launch all existing Backup Job" Background="{x:Null}" BorderBrush="{x:Null}" Grid.Row="1" Grid.Column="5" Margin="0,56,0,0" TextBlock.Foreground="Black" Grid.RowSpan="2"/>
-
-        <DataGrid Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="5" Margin="0,55,0,0" Grid.RowSpan="2" VerticalAlignment="Stretch"/>
-
-        <Button
-            Foreground="Black"
-            Content="Settings" Background="{x:Null}" BorderBrush="{x:Null}" Grid.Row="0" Grid.Column="6" TextBlock.Foreground="Black" Click="BtnClickSettings"/>
-
-        <Frame x:Name="Main" Grid.ColumnSpan="7" Grid.RowSpan="6" NavigationUIVisibility="Hidden"/>
+        <Frame x:Name="Main" Grid.ColumnSpan="8" Grid.RowSpan="7" NavigationUIVisibility="Hidden"/>
 
 
     </Grid>
