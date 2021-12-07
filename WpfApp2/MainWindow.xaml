@@ -52,6 +52,11 @@
 
         <DataGrid Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="5" Margin="0,55,0,28" Grid.RowSpan="3"/>
 
+        <Button
+            Foreground="Black"
+            Content="Settings" Background="{x:Null}" BorderBrush="{x:Null}" Grid.Row="0" Grid.Column="7" TextBlock.Foreground="Black" Click="BtnClickSettings"/>
+        
+       
         <Frame x:Name="Main" Grid.ColumnSpan="7" Grid.RowSpan="6"/>
     </Grid>
 

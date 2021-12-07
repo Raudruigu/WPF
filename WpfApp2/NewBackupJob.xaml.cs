@@ -24,5 +24,10 @@ namespace WpfApp2
         {
             InitializeComponent();
         }
+
+        private void BtnClickHome(object sender, RoutedEventArgs e)
+        {
+            Content = null;
+        }
     }
 }

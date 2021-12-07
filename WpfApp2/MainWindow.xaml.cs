@@ -28,9 +28,13 @@ namespace WpfApp2
 
         private void ClickButtonCreate(object sender, RoutedEventArgs e)
         {
-            Main.Content = new NewBackupJob();
+            Main.Content= new NewBackupJob();
 
         }
 
+        private void BtnClickSettings(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new ParametersMenu();
+        }
     }
 }
