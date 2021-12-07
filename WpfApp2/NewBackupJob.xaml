@@ -78,7 +78,7 @@
         </TextBox>
 
 
-        <Button Style="{DynamicResource MainMenuButton}" x:Name="MainMenuButton" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="1" Grid.RowSpan="3">
+        <Button Style="{DynamicResource MainMenuButton}" x:Name="MainMenuButton" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="1" Grid.RowSpan="3" Click="BtnClickHome">
             <Button.Background>
                 <ImageBrush ImageSource="/515+r6pkGUL.png"/>
             </Button.Background>

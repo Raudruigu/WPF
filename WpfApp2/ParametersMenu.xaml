@@ -67,7 +67,7 @@
             <Button x:Name="AddSoftwareExceptionsButton" Grid.Column="3" Grid.Row="4" Content="Add" Grid.ColumnSpan="2"/>
 
 
-            <Button x:Name="MainMenuButton" Grid.Row="1" Grid.Column="0" Grid.RowSpan="1" Grid.ColumnSpan="1">
+            <Button x:Name="MainMenuButton" Grid.Row="1" Grid.Column="0" Grid.RowSpan="1" Grid.ColumnSpan="1" Click="BtnClickHome">
                 <Button.Background>
                     <ImageBrush ImageSource="/515+r6pkGUL.png"/>
                 </Button.Background>
