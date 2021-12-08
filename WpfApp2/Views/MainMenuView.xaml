@@ -66,7 +66,7 @@
             Foreground="White"
             BorderBrush="{x:Null}" Grid.Row="0" Grid.Column="11" TextBlock.Foreground="Black" Grid.RowSpan="2" Cursor="Hand">
             <Button.Background>
-                <ImageBrush ImageSource="C:\Users\Mouad Nossair\Source\Repos\Raudruigu\WPF\WpfApp2\images\Settings.png"/>
+                <ImageBrush ImageSource="\images\Settings.png"/>
             </Button.Background>
         </Button>
 

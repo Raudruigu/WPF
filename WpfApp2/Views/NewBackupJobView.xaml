@@ -116,7 +116,7 @@
         </TextBox>
         <Button Command="{Binding ReturnBtn}" Style="{DynamicResource MainMenuButton}" x:Name="MainMenuButton" Grid.Row="18" Grid.Column="21" Grid.ColumnSpan="2" Foreground="#FF343E7E" Grid.RowSpan="2" Cursor="Hand">
             <Button.Background>
-                <ImageBrush ImageSource="C:\Users\Mouad Nossair\Source\Repos\Raudruigu\WPF\WpfApp2\images\ReturnArrow.png"/>
+                <ImageBrush ImageSource="\images\ReturnArrow.png"/>
             </Button.Background>
         </Button>
         <TextBlock x:Name="SubtitleTextBlock"

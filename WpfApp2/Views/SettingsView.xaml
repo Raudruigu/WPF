@@ -91,7 +91,7 @@
 
         <Button Command="{Binding ReturnBtn}" x:Name="MainMenuButton" Grid.Row="15" Grid.Column="11" Grid.RowSpan="3" Grid.ColumnSpan="3" Margin="0,1,0,0" RenderTransformOrigin="0.222,0.507" BorderThickness="0" Style="{DynamicResource MainMenuButton}" HorizontalAlignment="Center" Width="44">
             <Button.Background>
-                <ImageBrush ImageSource="C:\Users\Mouad Nossair\Source\Repos\Raudruigu\WPF\WpfApp2\images\ReturnArrow.png"/>
+                <ImageBrush ImageSource="\images\ReturnArrow.png"/>
             </Button.Background>
         </Button>
 
