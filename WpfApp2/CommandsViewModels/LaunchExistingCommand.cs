@@ -7,12 +7,12 @@ using WpfApp2.ViewModels;
 
 namespace WpfApp2.CommandsViewModels
 {
-    public class MainMenuCommand : CommandBase
+    public class LaunchExistingCommand : CommandBase
     {
         private readonly Navigation _navigation;
         private readonly Func<ViewModelBase> _createViewModel;
 
-        public MainMenuCommand(Navigation navigation, Func<ViewModelBase> createViewModel)
+        public LaunchExistingCommand(Navigation navigation, Func<ViewModelBase> createViewModel)
         {
             _navigation = navigation;
             _createViewModel = createViewModel;

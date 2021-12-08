@@ -34,12 +34,12 @@ namespace WpfApp2
 
         private SettingsViewModel CreateSettingsViewModel()
         {
-            return new SettingsViewModel(_navigation, CreateMainMenuViewModel);
+            return new SettingsViewModel(_navigation, CreateMainMenuViewModel1);
         }
 
         private NewBackupJobViewModel CreateNewBackupJobViewModel()
         {
-            return new NewBackupJobViewModel(_navigation, CreateMainMenuViewModel);
+            return new NewBackupJobViewModel(_navigation, CreateMainMenuViewModel2);
         }
 
 
@@ -48,27 +48,21 @@ namespace WpfApp2
             return new LaunchExistingViewModel(_navigation, CreateMainMenuViewModel);
         }
 
-
         private MainMenuViewModel CreateMainMenuViewModel()
         {
-            if (MainMenuViewModel.CreateNewBtn == ) 
-            {
-                return new MainMenuViewModel(_navigation, CreateSettingsViewModel);
-            }
-            else if (ICommand == )
-            {
-                return new MainMenuViewModel(_navigation, CreateNewBackupJobViewModel);
-            }
-            else if ()
-            {
-                return new MainMenuViewModel(_navigation, CreateLaunchExistingViewModel);
-            }
-            
-            
 
+            return new MainMenuViewModel(_navigation, CreateSettingsViewModel);
+        }
+
+        private MainMenuViewModel CreateMainMenuViewModel1()
+        {
+            return new MainMenuViewModel(_navigation, CreateNewBackupJobViewModel);
         }
 
 
-        
+        private MainMenuViewModel CreateMainMenuViewModel2()
+        {
+            return new MainMenuViewModel(_navigation, CreateLaunchExistingViewModel);
+        }
     }
 }
