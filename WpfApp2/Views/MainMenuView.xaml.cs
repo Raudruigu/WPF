@@ -13,15 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfApp2
+namespace WpfApp2.Views
 {
     /// <summary>
-    /// Logique d'interaction pour LayoutDataGrid.xaml
+    /// Logique d'interaction pour MainMenuView.xaml
     /// </summary>
-
-    public partial class LayoutDataGrid : Page
+    public partial class MainMenuView : UserControl
     {
-        public LayoutDataGrid()
+        public MainMenuView()
         {
             InitializeComponent();
         }

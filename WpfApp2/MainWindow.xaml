@@ -1,99 +1,30 @@
 ﻿<Window x:Class="WpfApp2.MainWindow"
-        Icon="C:\Users\tests\source\repos\WPF\WpfApp2\images\logoeasysave_18M_icon.ico"
+        Icon="C:\Users\Mouad Nossair\Source\Repos\Raudruigu\WPF\WpfApp2\images\logoeasysave_18M_icon.ico"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        xmlns:views="clr-namespace:WpfApp2.Views"
+        xmlns:viewmodels ="clr-namespace:WpfApp2.ViewModels"
         mc:Ignorable="d"
         Title="EasySave v2.0.0" Height="450" Width="800" Background="White">
-    <Grid >
-        <Grid.Background>
-            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="Black"/>
-                <GradientStop Color="#FF303030" Offset="1"/>
-            </LinearGradientBrush>
-        </Grid.Background>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="24*"/>
-            <RowDefinition Height="13*"/>
-            <RowDefinition Height="40*"/>
-            <RowDefinition Height="45*"/>
-            <RowDefinition Height="10*"/>
-            <RowDefinition Height="18*"/>
-            <RowDefinition Height="15*"/>
-            <RowDefinition Height="21*"/>
-            <RowDefinition Height="15*"/>
-            <RowDefinition Height="38*"/>
-            <RowDefinition Height="167*"/>
-            <RowDefinition Height="8*"/>
-            <RowDefinition Height="20*"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="47*"/>
-            <ColumnDefinition Width="18*"/>
-            <ColumnDefinition Width="35*"/>
-            <ColumnDefinition Width="92*"/>
-            <ColumnDefinition Width="39*"/>
-            <ColumnDefinition Width="40*"/>
-            <ColumnDefinition Width="45*"/>
-            <ColumnDefinition Width="170*"/>
-            <ColumnDefinition Width="45*"/>
-            <ColumnDefinition Width="170*"/>
-            <ColumnDefinition Width="63*"/>
-            <ColumnDefinition Width="37*"/>
-        </Grid.ColumnDefinitions>
 
-        <TextBlock x:Name="TitleTextBlock"
-                Grid.Column="0"
-                FontSize="16"
-                Foreground="White"
-                Text="EasySave" Grid.Row="0" Grid.ColumnSpan="2"/>
+    <Grid>
+        <Grid.Resources>
+            <DataTemplate DataType="{x:Type viewmodels:MainMenuViewModel}">
+                <views:MainMenuView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewmodels:SettingsViewModel}">
+                <views:SettingsView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewmodels:NewBackupJobViewModel}">
+                <views:NewBackupJobView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewmodels:LaunchExistingViewModel}">
+                <views:LaunchExistingView/>
+            </DataTemplate>
+        </Grid.Resources>
 
-        <Button x:Name="CreateANewBackupJobButton" Style="{DynamicResource CreateTheBackupJobButton}"
-            
-                    Content="Create a new Backup Job" BorderBrush="{x:Null}" Grid.Row="2" Grid.Column="3" Margin="0,40,20,0" FontFamily="Arial" UseLayoutRounding="True" Cursor="Hand" TextBlock.Foreground="Black" Click="ClickButtonCreate" Grid.RowSpan="2" Grid.ColumnSpan="3" />
-
-        <Button x:Name="LaunchAnExistingBackupJobButton" Style="{DynamicResource CreateTheBackupJobButton}"
-            
-                    Content="Launch an Existing Backup Job" BorderBrush="{x:Null}" Grid.Row="2" Grid.Column="7" Margin="0,40,0,0" TextBlock.Foreground="Black" Grid.RowSpan="2" />
-
-        <Button x:Name="LaunchAllExistingBackupJobsButton" Style="{DynamicResource CreateTheBackupJobButton}"
-                    
-                    Content="Launch All Existing Backup Jobs" BorderBrush="{x:Null}" Grid.Row="2" Grid.Column="9" Margin="0,40,0,0" TextBlock.Foreground="Black" Grid.RowSpan="2" />
-        <DataGrid x:Name="SavedBackupJobDataGrid" Grid.Row="9" Grid.Column="3" Grid.ColumnSpan="7" Grid.RowSpan="2"/>
-
-        <Button x:Name="SettingsButton"
-            Foreground="White"
-            BorderBrush="{x:Null}" Grid.Row="0" Grid.Column="11" TextBlock.Foreground="Black" Click="BtnClickSettings" Grid.RowSpan="2">
-            <Button.Background>
-                <ImageBrush ImageSource="/Settings.png"/>
-            </Button.Background>
-        </Button>
-
-        <TextBlock x:Name="MessageTextBlock" Grid.Column="3" Grid.Row="5" TextWrapping="Wrap" Text="TextBlock" Foreground="White" Grid.ColumnSpan="7" />
-
-        <TextBlock x:Name="ProgressionTextBlock"
-                Grid.Column="3"
-                FontSize="16"
-                Foreground="White"
-                Text="Progression" Grid.Row="7"/>
-
-        <TextBlock x:Name="SubtitleTextBlock"
-            Grid.Column="0"
-            FontSize="16"
-            Foreground="White"
-            Text="v2.0.0" Grid.Row="12"/>
-
-        <ProgressBar x:Name="BackupProgressBar" Grid.Column="4" Grid.Row="7" Grid.ColumnSpan="6"  />
-
-
-        <Frame x:Name="MainFrame" Grid.ColumnSpan="12" Grid.RowSpan="13" NavigationUIVisibility="Hidden">
-            <Frame.Background>
-                <ImageBrush/>
-            </Frame.Background>
-        </Frame>
-
-
+        <ContentControl Content="{Binding CurrentViewModel}"/>
     </Grid>
-
 </Window>

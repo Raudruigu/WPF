@@ -13,21 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfApp2
+namespace WpfApp2.Views
 {
     /// <summary>
-    /// Logique d'interaction pour Page1.xaml
+    /// Logique d'interaction pour LaunchExistingView.xaml
     /// </summary>
-    public partial class ParametersMenu : Page
+    public partial class LaunchExistingView : UserControl
     {
-        public ParametersMenu()
+        public LaunchExistingView()
         {
             InitializeComponent();
-        }
-
-        private void BtnClickHome(object sender, RoutedEventArgs e)
-        {
-            Content = null;
         }
     }
 }

@@ -13,21 +13,17 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfApp2
+namespace WpfApp2.Views
 {
     /// <summary>
-    /// Logique d'interaction pour Page1.xaml
+    /// Logique d'interaction pour SettingsView.xaml
     /// </summary>
-    public partial class NewBackupJob : Page
+    public partial class SettingsView : UserControl
     {
-        public NewBackupJob()
+        public SettingsView()
         {
             InitializeComponent();
         }
 
-        private void BtnClickHome(object sender, RoutedEventArgs e)
-        {
-            Content = null;
-        }
     }
 }

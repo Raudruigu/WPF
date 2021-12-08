@@ -1,11 +1,11 @@
-﻿<Page x:Class="WpfApp2.NewBackupJob"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d"
-        Title="NewBackupJob" Height="450" Width="800">
-
+﻿<UserControl x:Class="WpfApp2.Views.NewBackupJobView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfApp2.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -72,7 +72,7 @@
         <TextBlock x:Name="DestinationFolderToCopyToTextBlock"
                 Grid.Row="11" Grid.Column="13" TextAlignment="Center" Foreground="White" Grid.ColumnSpan="5"><Run Text="Destination folder"/><Run Language="fr-fr" Text=" "/><Run Text=" to copy to"/></TextBlock>
 
-        <TextBox x:Name="SourceFolderToCopyTextBox" Grid.Column="13"  Grid.Row="5" TextWrapping="Wrap" Grid.ColumnSpan="5" IsReadOnly="True">
+        <TextBox Text="{Binding SourceFolderText, UpdateSourceTrigger=PropertyChanged}" x:Name="SourceFolderToCopyTextBox" Grid.Column="13"  Grid.Row="5" TextWrapping="Wrap" Grid.ColumnSpan="5" IsReadOnly="True">
             <TextBox.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="3"/>
@@ -80,7 +80,7 @@
             </TextBox.Resources>
         </TextBox>
 
-        <TextBox x:Name="BackupJobNameTextBox" Grid.Column="3"  Grid.Row="5" TextWrapping="Wrap" Grid.ColumnSpan="7">
+        <TextBox Text="{Binding BackupJobCreateNameText, UpdateSourceTrigger=PropertyChanged}" x:Name="BackupJobNameTextBox" Grid.Column="3"  Grid.Row="5" TextWrapping="Wrap" Grid.ColumnSpan="7">
             <TextBox.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="3"/>
@@ -99,7 +99,7 @@
         <RadioButton x:Name="FullBackupRadio"  GroupName="TypeRadio" Grid.Column="4" Content="Full"  Grid.Row="15" Grid.ColumnSpan="2" Foreground="White"/>
         <RadioButton x:Name="DifferentialRadio"  GroupName="TypeRadio" Grid.Column="7" Content="Differential" Grid.Row="15" Grid.ColumnSpan="2" Foreground="White" />
 
-        <Button Style="{DynamicResource CreateTheBackupJobButton}" x:Name="CreateTheBackupJobButton"  Grid.Column="20" Content="Create and &#xD;&#xA;run the &#xA;backup job"  Grid.Row="7" Grid.ColumnSpan="2" Grid.RowSpan="2" >
+        <Button Command="{Binding CreateBackupBtn}" Style="{DynamicResource CreateTheBackupJobButton}" x:Name="CreateTheBackupJobButton"  Grid.Column="20" Content="Create and &#xD;&#xA;run the &#xA;backup job"  Grid.Row="7" Grid.ColumnSpan="2" Grid.RowSpan="2" >
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="5"/>
@@ -107,29 +107,29 @@
             </Button.Resources>
         </Button>
 
-        <TextBox x:Name="DestinationFolderTextBox" Grid.Column="13"  Grid.Row="15" TextWrapping="Wrap" Grid.ColumnSpan="5" IsReadOnly="True" >
+        <TextBox Text="{Binding DestinationFolderText, UpdateSourceTrigger=PropertyChanged}" x:Name="DestinationFolderTextBox" Grid.Column="13"  Grid.Row="15" TextWrapping="Wrap" Grid.ColumnSpan="5" IsReadOnly="True" >
             <TextBox.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="3"/>
                 </Style>
             </TextBox.Resources>
         </TextBox>
-        <Button Style="{DynamicResource MainMenuButton}" x:Name="MainMenuButton" Grid.Row="18" Grid.Column="21" Grid.ColumnSpan="2" Foreground="#FF343E7E" Grid.RowSpan="2">
+        <Button Command="{Binding ReturnBtn}" Style="{DynamicResource MainMenuButton}" x:Name="MainMenuButton" Grid.Row="18" Grid.Column="21" Grid.ColumnSpan="2" Foreground="#FF343E7E" Grid.RowSpan="2" Cursor="Hand">
             <Button.Background>
-                <ImageBrush ImageSource="/ReturnArrow.png"/>
+                <ImageBrush ImageSource="C:\Users\Mouad Nossair\Source\Repos\Raudruigu\WPF\WpfApp2\images\ReturnArrow.png"/>
             </Button.Background>
         </Button>
         <TextBlock x:Name="SubtitleTextBlock"
             FontSize="14"
             Foreground="White" Grid.Row="19" ><Run/><Run Language="fr-fr"/><Run Text="v2.0.0"/></TextBlock>
-        <Button Style="{DynamicResource CreateTheBackupJobButton}" x:Name="ChooseAFolderToCopyButton"  Grid.Column="14" Content="Choose a folder to copy"  Grid.Row="3" Grid.ColumnSpan="3"  >
+        <Button Command="{Binding SourceFolderBtn}" Style="{DynamicResource CreateTheBackupJobButton}" x:Name="ChooseAFolderToCopyButton"  Grid.Column="14" Content="Choose a folder to copy"  Grid.Row="3" Grid.ColumnSpan="3"  >
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="5"/>
                 </Style>
             </Button.Resources>
         </Button>
-        <Button Style="{DynamicResource CreateTheBackupJobButton}" x:Name="ChooseAFolderToCopyToButton"  Grid.Column="14" Content="Choose a folder to copy to"  Grid.Row="12" Grid.ColumnSpan="3" Margin="0,0,0,1" Grid.RowSpan="2" >
+        <Button Command="{Binding DestinationFolderBtn}" Style="{DynamicResource CreateTheBackupJobButton}" x:Name="ChooseAFolderToCopyToButton"  Grid.Column="14" Content="Choose a folder to copy to"  Grid.Row="12" Grid.ColumnSpan="3" Margin="0,0,0,1" Grid.RowSpan="2" >
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="5"/>
@@ -137,5 +137,4 @@
             </Button.Resources>
         </Button>
     </Grid>
-
-</Page>
+</UserControl>

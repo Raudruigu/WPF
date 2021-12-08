@@ -13,15 +13,15 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfApp2
+namespace WpfApp2.Views
 {
     /// <summary>
-    /// Logique d'interaction pour LayoutDataGrid.xaml
+    /// Logique d'interaction pour NewBackupJobView.xaml
     /// </summary>
-    public partial class LaunchAnExistingBackupJob : Page
+    public partial class NewBackupJobView : UserControl
     {
-        public LaunchAnExistingBackupJob() 
-        { 
+        public NewBackupJobView()
+        {
             InitializeComponent();
         }
     }
