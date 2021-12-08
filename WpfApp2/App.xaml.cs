@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Input;
 using WpfApp2.CommandsViewModels;
 using WpfApp2.ViewModels;
 
@@ -50,15 +51,23 @@ namespace WpfApp2
 
         private MainMenuViewModel CreateMainMenuViewModel()
         {
-            return new MainMenuViewModel(_navigation, CreateSettingsViewModel);
+            if (MainMenuViewModel.CreateNewBtn == ) 
+            {
+                return new MainMenuViewModel(_navigation, CreateSettingsViewModel);
+            }
+            else if (ICommand == )
+            {
+                return new MainMenuViewModel(_navigation, CreateNewBackupJobViewModel);
+            }
+            else if ()
+            {
+                return new MainMenuViewModel(_navigation, CreateLaunchExistingViewModel);
+            }
             
-        }
-
-        private MainMenuViewModel CreateMainMenuViewModel2()
-        {
-            return new MainMenuViewModel(_navigation, CreateNewBackupJobViewModel);
+            
 
         }
+
 
         
     }

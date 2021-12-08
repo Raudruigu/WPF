@@ -23,11 +23,20 @@ namespace WpfApp2.ViewModels
         public MainMenuViewModel(Navigation navigation, Func<SettingsViewModel> createSettingsViewModel)
         {
             GoToSettingsBtn = new NavigateCommand(navigation, createSettingsViewModel);
+            
         }
-
         public MainMenuViewModel(Navigation navigation, Func<NewBackupJobViewModel> createNewBackupJobViewModel)
         {
             CreateNewBtn = new NavigateCommand(navigation, createNewBackupJobViewModel);
+
         }
+
+        public MainMenuViewModel(Navigation navigation, Func<LaunchExistingViewModel> createLaunchExistingViewModel)
+        {
+            LaunchExistingBtn = new NavigateCommand(navigation, createLaunchExistingViewModel);
+
+        }
+
+
     }
 }
