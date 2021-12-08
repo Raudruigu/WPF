@@ -20,7 +20,7 @@ namespace WpfApp2
         }
         protected override void OnStartup(StartupEventArgs e)
         {
-            _navigation.CurrentViewModel = CreateMainMenuViewModel();
+            _navigation.CurrentViewModel = CreateLaunchExistingViewModel();
 
             MainWindow = new MainWindow()
             {
@@ -36,6 +36,18 @@ namespace WpfApp2
             return new SettingsViewModel(_navigation, CreateMainMenuViewModel);
         }
 
+        private NewBackupJobViewModel CreateNewBackupJobViewModel()
+        {
+            return new NewBackupJobViewModel(_navigation, CreateMainMenuViewModel);
+        }
+
+
+        private LaunchExistingViewModel CreateLaunchExistingViewModel()
+        {
+            return new LaunchExistingViewModel(_navigation, CreateMainMenuViewModel);
+        }
+
+
         private MainMenuViewModel CreateMainMenuViewModel()
         {
             return new MainMenuViewModel(_navigation, CreateSettingsViewModel);
@@ -48,9 +60,6 @@ namespace WpfApp2
 
         }
 
-        private NewBackupJobViewModel CreateNewBackupJobViewModel()
-        {
-            return new NewBackupJobViewModel(_navigation, CreateMainMenuViewModel2);
-        }
+        
     }
 }

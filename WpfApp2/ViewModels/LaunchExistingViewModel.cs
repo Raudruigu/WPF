@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using WpfApp2.CommandsViewModels;
 
 namespace WpfApp2.ViewModels
 {
@@ -32,9 +33,10 @@ namespace WpfApp2.ViewModels
 
         //-------------------------------------------------------------------------------------------------//
 
-        public LaunchExistingViewModel()
+        public LaunchExistingViewModel(Navigation navigation, Func<MainMenuViewModel> createMainMenuViewModel)
         {
-
+            ReturnBtn = new NavigateCommand(navigation, createMainMenuViewModel);
         }
+
     }
 }

@@ -7,6 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Models\**" />
+    <EmbeddedResource Remove="Models\**" />
+    <None Remove="Models\**" />
+    <Page Remove="Models\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="1024px-Hamburger_icon_white.svg.png" />
     <None Remove="79-796674_professional-background-images-for-ppt-3-high-resolution.jpg" />
     <None Remove="images\png-clipart-white-flat-taskbar-icons-settings-gear-illustration-thumbnail.png" />
@@ -22,18 +29,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="images\8c685fdc6087e7ac6e8722d8221f8406.jpg" />
-    <Resource Include="images\png-clipart-white-flat-taskbar-icons-settings-gear-illustration-thumbnail.png" />
     <Resource Include="images\ReturnArrow.png" />
     <Resource Include="images\Settings.png" />
   </ItemGroup>
 
   <ItemGroup>
     <SplashScreen Include="images\SplashScreen1.png" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Models\" />
   </ItemGroup>
 
 </Project>
